@@ -1,0 +1,232 @@
+// 공통 inner
+.inner {
+	padding: 0 0.9375rem;
+}
+
+.moWrap {
+	width: 100%;
+	.header {
+		position: relative;
+		height: 3.125rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-bottom: 0.0625rem solid #e7241d;
+		.arrBack {
+			position: absolute;
+			left: 0rem;
+			top: 50%;
+			transform: translateY(-50%);
+			background: url("../img/arrBack.png");
+			background-size: cover;
+			width: 1.5625rem;
+			height: 1.3125rem;
+		}
+		h1 {
+			font-size: 1.125rem;
+			color: #000;
+			font-weight: 500;
+		}
+	}
+	// 메인
+	&#main {
+		.txtInfo {
+			.txtWrap {
+				padding: 1.25rem 0;
+				p {
+					display: flex;
+					align-items: center;
+					margin-top: 1.25rem;
+					font-size: 0.8125rem;
+					color: #000;
+					&:first-of-type {
+						margin-top: 0;
+					}
+					img {
+						display: inline-block;
+						margin-right: 0.3125rem;
+					}
+					&.center {
+						text-align: center;
+					}
+				}
+			}
+		}
+		.list {
+			padding: 1.25rem 0;
+			padding-bottom: 3.125rem;
+			border-top: 0.0625rem solid #eee;
+			display: flex;
+			gap: 0.625rem;
+			flex-wrap: wrap;
+			li {
+				width: calc(50% - 0.3125rem);
+				a {
+					img {
+						display: inline-block;
+						width: 100%;
+						height: 13.0625rem;
+					}
+					h2 {
+						color: #000;
+						font-size: 0.75rem;
+						text-align: center;
+						font-weight: bold;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+						overflow: hidden;
+					}
+					.date {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						gap: 0.3125rem;
+						color: #aaa;
+						span {
+							display: inline-block;
+							color: inherit;
+							font-size: 0.6875rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	// 릴레이티켓
+	&#relayTicket {
+		.list {
+			padding-top: 1.25rem;
+			padding-bottom: 1.875rem;
+			border-bottom: 0.0625rem solid #eee;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.625rem;
+			li {
+        overflow: hidden;
+				position: relative;
+				width: calc(33.333% - 0.4166rem);
+				text-align: center;
+				border-radius: 624.9375rem;
+				.date,.dim,.img {
+					display: none;
+				}
+				&.start {
+					border: 0.0625rem solid #e7241d;
+					box-sizing: border-box;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					img {
+						width: 2.875rem;
+						height: 2.5rem;
+					}
+				}
+				a {
+					display: inline-block;
+					img {
+						width: 100%;
+            height: 6.75rem;
+					}
+				}
+				&.on {
+          .img{
+            display: block;
+            position: relative;
+          }
+          .imgDim{
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            bottom: 0rem;
+            height: 3.625rem;
+            background: rgba(0, 0, 0, 0.5);
+          }
+					.date {
+            position: absolute;
+            z-index: 2;
+            color: #fff;
+            left: 0;
+            width: 100%;
+            bottom: 1.3625rem;
+            display: block;
+            font-size: 0.875rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 티켓스템프
+.ticketStamp {
+	position: fixed;
+	z-index: 9997;
+	left: 15px;
+	bottom: 15px;
+	img {
+		width: 6.4375rem;
+		height: 6.4375rem;
+	}
+}
+
+//문화릴레이티켓 리스트
+.botBtn{
+  position: relative;
+  padding: 20px;
+  background: #ff6742;
+  .arrBtn{
+    position: absolute;
+  }
+  dl{
+    dt{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap:20px;
+      font-weight: 500;
+      color: #fff;
+      font-size: 20px;
+      color: #fff;
+      img{
+        display: inline-block;
+        width: 25px; height: 16px;
+      }
+    }
+    dd{}
+  }
+}
+
+.dim {
+	position: fixed;
+	z-index: 9998;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	&.open {
+		display: block;
+	}
+}
+
+.popup {
+	position: fixed;
+	z-index: 9999;
+	background: #fff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	display: none;
+	&.open {
+		display: block;
+	}
+}
+
+@media (min-width: 400px) {
+	html {
+		font-size: 18px;
+	}
+}

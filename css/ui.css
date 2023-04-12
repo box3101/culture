@@ -1,5 +1,465 @@
-.moWrap {
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+textarea,
+video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  font-family: "Noto Sans", sans-serif !important;
+  color: #2d2d2d;
+  letter-spacing: -0.05em;
+  line-height: 1.5;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  background-color: #fff;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: block !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  left: -10000000000000000px !important;
+  top: -999999px !important;
+  width: 0;
+  height: 0;
+  font-size: 1px;
+}
+
+/* skip nav */
+.skip-nav a {
+  display: block;
+  height: 0;
+  margin-bottom: -1px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0;
+  position: relative;
+}
+
+.skip-nav a:focus,
+.skip-nav a:active {
+  width: 100%;
+  display: block;
+  height: auto;
+  padding: 15px 0;
+  font-size: 14px;
+  color: #000;
+  background-color: #ddd;
+}
+
+.skip-nav a:focus:before,
+.skip-nav a:active:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 2px;
+  border: 2px solid #000;
+}
+
+/* button */
+button {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 0;
+  padding: 0rem;
+  border: 0rem;
+  font-weight: normal;
+  background-color: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-weight: 300;
+  src: url(../font/NotoSans-Light.eot);
+  src: url(../font/NotoSans-Light.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans-Light.woff) format("woff"), url(../font/NotoSans-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-weight: 400;
+  src: url(../font/NotoSans-Regular.eot);
+  src: url(../font/NotoSans-Regular.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans-Regular.woff) format("woff"), url(../font/NotoSans-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-weight: 500;
+  src: url(../font/NotoSans-Medium.eot);
+  src: url(../font/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans-Medium.woff) format("woff"), url(../font/NotoSans-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-weight: 700;
+  src: url(../font/NotoSans-Bold.eot);
+  src: url(../font/NotoSans-Bold.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans-Bold.woff) format("woff"), url(../font/NotoSans-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-weight: 300;
+  src: url(../font/NotoSans-Light.eot);
+  src: url(../font/NotoSans-Light.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans-Light.woff) format("woff"), url(../font/NotoSans-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-weight: 400;
+  src: url(../font/NotoSans-Regular.eot);
+  src: url(../font/NotoSans-Regular.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans-Regular.woff) format("woff"), url(../font/NotoSans-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-weight: 500;
+  src: url(../font/NotoSans-Medium.eot);
+  src: url(../font/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans-Medium.woff) format("woff"), url(../font/NotoSans-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-weight: 700;
+  src: url(../font/NotoSans-Bold.eot);
+  src: url(../font/NotoSans-Bold.eot?#iefix) format("embedded-opentype"), url(../font/NotoSans-Bold.woff) format("woff"), url(../font/NotoSans-Bold.ttf) format("truetype");
+}
+.inner {
+  padding: 0 0.9375rem;
+}
+
+.moWrap {
+  width: 100%;
+}
+.moWrap .header {
+  position: relative;
+  height: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0.0625rem solid #e7241d;
+}
+.moWrap .header .arrBack {
+  position: absolute;
+  left: 0rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("../img/arrBack.png");
+  background-size: cover;
+  width: 1.5625rem;
+  height: 1.3125rem;
+}
+.moWrap .header h1 {
+  font-size: 1.125rem;
+  color: #000;
+  font-weight: 500;
+}
+.moWrap#main .txtInfo .txtWrap {
+  padding: 1.25rem 0;
+}
+.moWrap#main .txtInfo .txtWrap p {
+  display: flex;
+  align-items: center;
+  margin-top: 1.25rem;
+  font-size: 0.8125rem;
+  color: #000;
+}
+.moWrap#main .txtInfo .txtWrap p:first-of-type {
+  margin-top: 0;
+}
+.moWrap#main .txtInfo .txtWrap p img {
+  display: inline-block;
+  margin-right: 0.3125rem;
+}
+.moWrap#main .txtInfo .txtWrap p.center {
+  text-align: center;
+}
+.moWrap#main .list {
+  padding: 1.25rem 0;
+  padding-bottom: 3.125rem;
+  border-top: 0.0625rem solid #eee;
+  display: flex;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+}
+.moWrap#main .list li {
+  width: calc(50% - 0.3125rem);
+}
+.moWrap#main .list li a img {
+  display: inline-block;
+  width: 100%;
+  height: 13.0625rem;
+}
+.moWrap#main .list li a h2 {
+  color: #000;
+  font-size: 0.75rem;
+  text-align: center;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.moWrap#main .list li a .date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3125rem;
+  color: #aaa;
+}
+.moWrap#main .list li a .date span {
+  display: inline-block;
+  color: inherit;
+  font-size: 0.6875rem;
+}
+.moWrap#relayTicket .list {
+  padding-top: 1.25rem;
+  padding-bottom: 1.875rem;
+  border-bottom: 0.0625rem solid #eee;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+.moWrap#relayTicket .list li {
+  overflow: hidden;
+  position: relative;
+  width: calc(33.333% - 0.4166rem);
+  text-align: center;
+  border-radius: 624.9375rem;
+}
+.moWrap#relayTicket .list li .date, .moWrap#relayTicket .list li .dim, .moWrap#relayTicket .list li .img {
+  display: none;
+}
+.moWrap#relayTicket .list li.start {
+  border: 0.0625rem solid #e7241d;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.moWrap#relayTicket .list li.start img {
+  width: 2.875rem;
+  height: 2.5rem;
+}
+.moWrap#relayTicket .list li a {
+  display: inline-block;
+}
+.moWrap#relayTicket .list li a img {
+  width: 100%;
+  height: 6.75rem;
+}
+.moWrap#relayTicket .list li.on .img {
+  display: block;
+  position: relative;
+}
+.moWrap#relayTicket .list li.on .imgDim {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0rem;
+  height: 3.625rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+.moWrap#relayTicket .list li.on .date {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  left: 0;
+  width: 100%;
+  bottom: 1.3625rem;
+  display: block;
+  font-size: 0.875rem;
+}
+
+.ticketStamp {
+  position: fixed;
+  z-index: 9997;
+  left: 15px;
+  bottom: 15px;
+}
+.ticketStamp img {
+  width: 6.4375rem;
+  height: 6.4375rem;
+}
+
+.botBtn {
+  position: relative;
+  padding: 20px;
+  background: #ff6742;
+}
+.botBtn .arrBtn {
+  position: absolute;
+}
+.botBtn dl dt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-weight: 500;
+  color: #fff;
+  font-size: 20px;
+  color: #fff;
+}
+.botBtn dl dt img {
+  display: inline-block;
+  width: 25px;
+  height: 16px;
+}
+.dim {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.dim.open {
+  display: block;
+}
+
+.popup {
+  position: fixed;
+  z-index: 9999;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  display: none;
+}
+.popup.open {
+  display: block;
+}
+
+@media (min-width: 400px) {
+  html {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=ui.css.map */
