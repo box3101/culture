@@ -199,6 +199,38 @@ button {
   box-sizing: border-box;
 }
 
+.oneLine {
+  display: inline-block;
+  width: 12.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.twoLine {
+  overflow: hidden;
+  white-space: normal;
+  line-height: 1.5;
+  height: 3em;
+  text-align: left;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.threeLine {
+  overflow: hidden;
+  white-space: normal;
+  line-height: 1.4;
+  height: 4.2em;
+  text-align: left;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
 @font-face {
   font-family: "Noto Sans";
   font-weight: 300;
@@ -347,9 +379,11 @@ button {
   position: relative;
   width: calc(33.333% - 0.4166rem);
   text-align: center;
-  border-radius: 624.9375rem;
+  border-radius: 9999px;
 }
-.moWrap#relayTicket .list li .date, .moWrap#relayTicket .list li .dim, .moWrap#relayTicket .list li .img {
+.moWrap#relayTicket .list li .date,
+.moWrap#relayTicket .list li .dim,
+.moWrap#relayTicket .list li .img {
   display: none;
 }
 .moWrap#relayTicket .list li.start {
@@ -368,7 +402,7 @@ button {
 }
 .moWrap#relayTicket .list li a img {
   width: 100%;
-  height: 6.75rem;
+  height: 5.75rem;
 }
 .moWrap#relayTicket .list li.on .img {
   display: block;
@@ -397,37 +431,120 @@ button {
 .ticketStamp {
   position: fixed;
   z-index: 9997;
-  left: 15px;
-  bottom: 15px;
+  left: 0.9375rem;
+  bottom: 0.9375rem;
 }
 .ticketStamp img {
-  width: 6.4375rem;
-  height: 6.4375rem;
+  width: 103px;
+  height: 103px;
 }
 
 .botBtn {
-  position: relative;
-  padding: 20px;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  padding: 1.25rem;
   background: #ff6742;
+  box-sizing: border-box;
 }
 .botBtn .arrBtn {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -1.375rem;
+  background: #ff6742;
+  width: 2.5rem;
+  height: 2.6875rem;
+  border-radius: 9999px;
+  z-index: 0;
+}
+.botBtn .arrBtn::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-0.4375rem);
+  top: 0.5625rem;
+  width: 1.6875rem;
+  height: 0.625rem;
+  background: url(../img/arrUp.png) no-repeat;
+  background-size: 50%;
 }
 .botBtn dl dt {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
   font-weight: 500;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #fff;
 }
 .botBtn dl dt img {
   display: inline-block;
-  width: 25px;
-  height: 16px;
+  width: 1.5625rem;
+  height: 1rem;
 }
+.botBtn dl dd ul {
+  margin-top: 1.25rem;
+  background: #fff;
+  border-radius: 0.625rem;
+  padding: 1.275rem;
+  max-height: 28.5rem;
+  overflow-y: scroll;
+}
+.botBtn dl dd ul li {
+  margin-top: 0.225rem;
+  padding: 0.225rem 0;
+  border-bottom: 0.0625rem dotted #aaa;
+}
+.botBtn dl dd ul li:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+}
+.botBtn dl dd ul li:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.botBtn dl dd ul li a {
+  display: inline-block;
+  display: flex;
+  width: 100%;
+  align-content: center;
+  gap: 1rem;
+}
+.botBtn dl dd ul li a .img {
+  width: 30%;
+}
+.botBtn dl dd ul li a .img img {
+  height: 6.275rem;
+}
+.botBtn dl dd ul li a .desc {
+  width: 70%;
+}
+.botBtn dl dd ul li a .desc h2 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.botBtn dl dd ul li a .desc .txtWrap {
+  margin-top: 0.3125rem;
+}
+.botBtn dl dd ul li a .desc .txtWrap p {
+  margin: 0.125rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.8375rem;
+  font-weight: 400;
+  color: #444444;
+}
+.botBtn dl dd ul li a .desc .txtWrap p img {
+  width: 0.875rem;
+  height: 1.125rem;
+}
+
 .dim {
   position: fixed;
   z-index: 9998;

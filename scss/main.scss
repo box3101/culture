@@ -102,12 +102,14 @@
 			flex-wrap: wrap;
 			gap: 0.625rem;
 			li {
-        overflow: hidden;
+				overflow: hidden;
 				position: relative;
 				width: calc(33.333% - 0.4166rem);
 				text-align: center;
-				border-radius: 624.9375rem;
-				.date,.dim,.img {
+				border-radius: 9999px;
+				.date,
+				.dim,
+				.img {
 					display: none;
 				}
 				&.start {
@@ -125,32 +127,32 @@
 					display: inline-block;
 					img {
 						width: 100%;
-            height: 6.75rem;
+						height: 5.75rem;
 					}
 				}
 				&.on {
-          .img{
-            display: block;
-            position: relative;
-          }
-          .imgDim{
-            display: block;
-            position: absolute;
-            left: 0;
-            width: 100%;
-            bottom: 0rem;
-            height: 3.625rem;
-            background: rgba(0, 0, 0, 0.5);
-          }
+					.img {
+						display: block;
+						position: relative;
+					}
+					.imgDim {
+						display: block;
+						position: absolute;
+						left: 0;
+						width: 100%;
+						bottom: 0rem;
+						height: 3.625rem;
+						background: rgba(0, 0, 0, 0.5);
+					}
 					.date {
-            position: absolute;
-            z-index: 2;
-            color: #fff;
-            left: 0;
-            width: 100%;
-            bottom: 1.3625rem;
-            display: block;
-            font-size: 0.875rem;
+						position: absolute;
+						z-index: 2;
+						color: #fff;
+						left: 0;
+						width: 100%;
+						bottom: 1.3625rem;
+						display: block;
+						font-size: 0.875rem;
 					}
 				}
 			}
@@ -162,39 +164,123 @@
 .ticketStamp {
 	position: fixed;
 	z-index: 9997;
-	left: 15px;
-	bottom: 15px;
+	left: 0.9375rem;
+	bottom: 0.9375rem;
 	img {
-		width: 6.4375rem;
-		height: 6.4375rem;
+		width: 103px;
+		height: 103px;
 	}
 }
 
 //문화릴레이티켓 리스트
-.botBtn{
-  position: relative;
-  padding: 20px;
-  background: #ff6742;
-  .arrBtn{
-    position: absolute;
-  }
-  dl{
-    dt{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap:20px;
-      font-weight: 500;
-      color: #fff;
-      font-size: 20px;
-      color: #fff;
-      img{
-        display: inline-block;
-        width: 25px; height: 16px;
-      }
-    }
-    dd{}
-  }
+.botBtn {
+	position: fixed;
+  z-index: 10;
+  left: 0; width: 100%;
+  bottom: 0;
+	padding: 1.25rem;
+	background: #ff6742;
+  box-sizing: border-box;
+	.arrBtn {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: -1.375rem;
+		background: #ff6742;
+		width: 2.5rem;
+		height: 2.6875rem;
+		border-radius: 9999px;
+		z-index: 0;
+		&::after {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-0.4375rem);
+			top: 0.5625rem;
+			width: 1.6875rem;
+			height: 0.625rem;
+			background: url(../img/arrUp.png) no-repeat;
+			background-size: 50%;
+		}
+	}
+	dl {
+		dt {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 1.25rem;
+			font-weight: 500;
+			color: #fff;
+			font-size: 1.25rem;
+			color: #fff;
+			img {
+				display: inline-block;
+				width: 1.5625rem;
+				height: 1rem;
+			}
+		}
+		dd {
+      // display: none;
+			ul {
+				margin-top: 1.25rem;
+				background: #fff;
+				border-radius: 0.625rem;
+				padding: 1.275rem;
+        max-height: 28.5rem;
+        overflow-y: scroll;
+				li {
+					&:first-of-type {
+						margin-top: 0;
+						padding-top: 0;
+					}
+					margin-top: 0.225rem;
+					padding: 0.225rem 0;
+					border-bottom: 0.0625rem dotted #aaa;
+          &:last-of-type{
+            border-bottom: none;
+            padding-bottom: 0;
+          }
+					a {
+						display: inline-block;
+						.img {
+              width: 30%;
+							img {
+								height: 6.275rem;
+							}
+						}
+						.desc {
+              width: 70%;
+							h2 {
+								font-weight: 500;
+                font-size: 1rem;
+							}
+							.txtWrap {
+								margin-top: 0.3125rem;
+								p {
+									margin: 0.125rem 0;
+									display: flex;
+									align-items: center;
+									gap: 0.625rem;
+									font-size: 0.8375rem;
+									font-weight: 400;
+									color: #444444;
+									img {
+										width: 0.875rem;
+										height: 1.125rem;
+									}
+								}
+							}
+						}
+						display: flex;
+            width: 100%;
+						align-content: center;
+						gap: 1rem;
+					}
+				}
+			}
+		}
+	}
 }
 
 .dim {
