@@ -1,0 +1,140 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+.moWrap {
+  text-align: center;
+  letter-spacing: 0.025rem;
+  box-sizing: border-box;
+}
+.con-top {
+  background: #ffb898;
+  padding: 2.125rem 0;
+}
+.con-top span {
+  font-size: 18px;
+  font-weight: 500;
+}
+.con-top p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 42px;
+  margin: 0;
+}
+
+.con-bottom {
+  padding: 3.75rem 3.125rem;
+}
+.con-bottom .tit {
+  font-size: 18px;
+  line-height: 3.125rem;
+  margin: 0;
+}
+.con-bottom .content {
+  font-size: 16px;
+  font-weight: 300;
+  color: #999999;
+  padding: 2.0625rem 4.9375rem;
+  border: 2px solid #dddddd;
+  margin: 2rem 0 2.5rem;
+  border-radius: 0.625rem;
+}
+.con-bottom button {
+  border: 2px solid #dddddd;
+  border-radius: 10px;
+  padding: 1.5625rem 2.8125rem;
+  font-size: 15px;
+  background: #fff;
+  font-size: 16px;
+  margin: 0 0.4375rem;
+}
+.con-bottom button:hover {
+  background: #ff6742;
+  color: #fff;
+  border: 2px solid transparent;
+}
+
+.confirm .con-top {
+  background: #e32525;
+}
+.confirm .con-top::before {
+  background-image: url(../img/icon-close.png);
+  content: "";
+  display: inline-block;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  right: -16rem;
+  width: 48px;
+  height: 48px;
+}
+.confirm .con-bottom span {
+  font-size: 18px;
+  line-height: 42px;
+}
+.confirm .con-bottom button {
+  margin-top: 38px;
+}
+.ticket .con-top {
+  background: #e32525;
+}
+.ticket .con-top span {
+  padding: 32px 0;
+  color: #fff;
+}
+
+.ticket .con-bottom {
+  padding: 57px 50px;
+}
+
+.ticket .con-bottom img {
+  width: 100%;
+  height: 717px;
+}
+.ticket .con-bottom .flex {
+  margin: 33px 0 30px;
+  display: flex;
+  align-items: center;
+}
+.ticket .con-bottom .flex img {
+  width: 111px;
+  height: 111px;
+}
+.ticket .con-bottom .flex p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 44px;
+  margin-left: 30px;
+}
+.ticket .con-bottom .content-01 {
+  font-size: 15px;
+  line-height: 42px;
+  letter-spacing: 0.04rem;
+  margin-bottom: 50px;
+  text-align: left;
+}
+.ticket .con-bottom .content-02 {
+  border: 2px solid #ff6742;
+  border-radius: 50px;
+  padding: 35px 65px;
+}
+.ticket .con-bottom .content-02 a {
+  text-decoration: none;
+  color: #ff6742;
+  font-size: 18px;
+}
+
+.ticket .con-top .closePop {
+  background-image: url(../img/icon-close.png);
+  content: "";
+  display: inline-block;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  right: -20rem;
+  width: 48px;
+  height: 48px;
+}
