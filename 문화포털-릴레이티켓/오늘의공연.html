@@ -7,6 +7,7 @@
   <!-- 모바일 전용 뷰포트 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/ui.css">
+  <link rel="stylesheet" href="../css/ui2.css">
   <title>문화N티켓</title>
 </head>
 
@@ -122,20 +123,72 @@
 
   <!-- 다중팝업 -->
   <div class="dim"></div>
+
+  <!-- 문화릴레이티켓 팝업 -->
   <div class="popup" id="popup1">
-    <p>팝업1111</p>
-    <button onclick="closePopup()">닫기</button>
-    <button onclick="openPopup(2)">관람인증</button>
+    <div class="ticket">
+      <div class="con-top">
+        <span>문화릴레이티켓</span>
+        <button onclick="closePopup(1)" class="closePop"></button>
+      </div>
+      <div class="con-bottom">
+        <img src="../img/ticket-img.png"
+          alt="흥보 마누라 이혼소송 사건 The Divorce Case of Heong-bo's Wife 23.04.11 - 04.19 국립정동극장_세실" />
+        <div class="flex">
+          <img src="../img/qr-img.png" alt="" />
+          <p>매표소에서 문화릴레이티켓 인증을 받으세요!</p>
+        </div>
+        <div class="content-01">
+          인증을 받지 않으면 문화릴레이티켓 할인 혜택 및 나의
+          문화릴레이티켓 현황 서비스를 받을 수 없습니다.
+        </div>
+        <div class="content-02">
+          <button type="button" onclick="openPopup(2)">문화릴레이티켓 관람인증</button>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- 문화릴레이티켓 팝업  eee -->
+
+
   <div class="popup" id="popup2">
-    <p>관람인증</p>
-    <button onclick="closePopup()">닫기</button>
-    <button onclick="openPopup(3)">관람인증</button>
+    <!-- 문화릴레이티켓 관람인증 -->
+    <div class="code">
+      <div class="con-top">
+        <p>
+          <span>문화릴레이티켓 관람인증</span><br />
+          매표원을 통해 관람인증을 받으세요
+        </p>
+      </div>
+      <div class="con-bottom">
+        <p class="tit">
+          인증코드 입력으로 문화릴레이티켓을 <br />
+          인증할 수 있습니다.
+        </p>
+        <input type="number" class="content" placeholder="인증코드를 입력해주세요">
+
+        <div class="btnWrap">
+          <button class="btn" onclick="openPopup(3)">확인</button>
+          <button class="btn" onclick="closePopup(2)">취소</button>
+        </div>
+      </div>
+    </div>
+    <!-- 문화릴레이티켓 관람인증 eee -->
   </div>
+
+  <!-- 인증코드 확인 -->
   <div class="popup" id="popup3">
-    <p>인증코드</p>
-    <button onclick="closePopup()">닫기</button>
+    <div class="confirm">
+      <div class="con-top">
+        <button onclick="closePopup(3)" class="closePop"></button>
+      </div>
+      <div class="con-bottom">
+        <span>인증코드를 확인해주세요</span> <br />
+        <button class="btn" onclick="closePopup(3)">확인</button>
+      </div>
+    </div>
   </div>
+  <!-- 인증코드 확인 eee -->
 
   <script>
 
@@ -144,13 +197,13 @@
 
     const openPopup = (num) => {
       $dim.classList.add("open");
-      $$popup.forEach((popup) => popup.classList.remove("open"));
+      // $$popup.forEach((popup) => popup.classList.remove("open"));
       document.querySelector(`#popup${num}`).classList.add("open")
     }
 
-    const closePopup = () => {
+    const closePopup = (num) => {
       $dim.classList.remove("open");
-      $$popup.forEach((popup) => popup.classList.remove("open"));
+      document.querySelector(`#popup${num}`).classList.remove("open")
     }
 
   </script>
