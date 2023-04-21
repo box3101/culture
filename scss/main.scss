@@ -182,8 +182,8 @@
 	padding: 1.25rem;
 	background: #ff6742;
 	box-sizing: border-box;
-	&.open{
-		dd{
+	&.open {
+		dd {
 			display: block;
 		}
 		.arrBtn::after {
@@ -299,6 +299,110 @@
 	}
 }
 
+//통계관리
+.management {
+	.wrap {
+		display: flex;
+		gap: 40px;
+		.dev1 {
+			width: 40%; /* 600/1400 */
+			ul {
+				display: flex;
+				border: 1px solid #cccccc;
+				border-radius: 10px;
+				padding: 43px 0;
+				li {
+					flex: 1;
+					text-align: center;
+					border-right: 1px dotted #ccc;
+					.txtWrap {
+						margin-top: 10px;
+						font-size: 18px;
+						font-weight: 500;
+						color: #000;
+						span {
+							display: block;
+							color: #000;
+							font-weight: bold;
+							font-size: 30px;
+						}
+					}
+				}
+			}
+		}
+		.dev2 {
+			width: 33%; /* 540/1400 */
+		}
+		.dev3 {
+			flex: 1;
+			.comBox1 {
+				padding: 15px 20px;
+				border: 1px solid #ccc;
+				border-radius: 10px;
+				span {
+					font-size: 30px;
+					font-weight: bold;
+					display: inline-block;
+					margin-left: 10px;
+				}
+				&:first-of-type {
+					margin-bottom: 18px;
+				}
+			}
+		}
+	}
+}
+
+// 공통
+.row{
+	margin-top: 40px;
+}
+.comTitWrap {
+	p {
+		font-size: 16px;
+		color: #666666;
+		font-weight: 300;
+		margin-top: -15px;
+	}
+	margin-bottom: 15px;
+}
+
+.comTit {
+	color: #101317;
+	font-weight: 500;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.flex {
+	display: flex;
+	&.aic {
+		align-items: center;
+	}
+	&.jcb {
+		justify-content: space-between;
+	}
+}
+
+// 공통테이블
+.comTable {
+	.right{
+		text-align: right;
+		padding-right: 15px;
+	}
+	th,
+	td {
+		border: 1px solid #cccccc;
+		padding: 7px 0;
+		box-sizing: border-box;
+		font-size: 16px;
+		color: #222222;
+		text-align: center;
+	}
+	th {
+		background: #f6f6f6;
+	}
+}
+
 .dim {
 	position: fixed;
 	z-index: 9998;
@@ -320,7 +424,7 @@
 	background: #fff;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 	color: #fff;
 	display: none;
 	&.open {

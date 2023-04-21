@@ -558,6 +558,105 @@ button {
   object-fit: contain;
 }
 
+.management .wrap {
+  display: flex;
+  gap: 40px;
+}
+.management .wrap .dev1 {
+  width: 40%; /* 600/1400 */
+}
+.management .wrap .dev1 ul {
+  display: flex;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  padding: 43px 0;
+}
+.management .wrap .dev1 ul li {
+  flex: 1;
+  text-align: center;
+  border-right: 1px dotted #ccc;
+}
+.management .wrap .dev1 ul li .txtWrap {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+.management .wrap .dev1 ul li .txtWrap span {
+  display: block;
+  color: #000;
+  font-weight: bold;
+  font-size: 30px;
+}
+.management .wrap .dev2 {
+  width: 33%; /* 540/1400 */
+}
+.management .wrap .dev3 {
+  flex: 1;
+}
+.management .wrap .dev3 .comBox1 {
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.management .wrap .dev3 .comBox1 span {
+  font-size: 30px;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 10px;
+}
+.management .wrap .dev3 .comBox1:first-of-type {
+  margin-bottom: 18px;
+}
+
+.row {
+  margin-top: 40px;
+}
+
+.comTitWrap {
+  margin-bottom: 15px;
+}
+.comTitWrap p {
+  font-size: 16px;
+  color: #666666;
+  font-weight: 300;
+  margin-top: -15px;
+}
+
+.comTit {
+  color: #101317;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.flex {
+  display: flex;
+}
+.flex.aic {
+  align-items: center;
+}
+.flex.jcb {
+  justify-content: space-between;
+}
+
+.comTable .right {
+  text-align: right;
+  padding-right: 15px;
+}
+.comTable th,
+.comTable td {
+  border: 1px solid #cccccc;
+  padding: 7px 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #222222;
+  text-align: center;
+}
+.comTable th {
+  background: #f6f6f6;
+}
+
 .dim {
   position: fixed;
   z-index: 9998;
